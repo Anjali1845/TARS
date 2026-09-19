@@ -1,0 +1,18 @@
+# Virtual Environment
+.venv/
+
+# API Keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Streamlit
+.streamlit/
+
+# macOS
+.DS_Store
+
+# Audio temp files
+*.mp3chatbots_test.ipynb

@@ -1,0 +1,47 @@
+# TARS — pinned dependencies
+# Verified working on: Python 3.12.14 (macOS arm64), 2026-09-19.
+#
+# Set up:
+#   python3.12 -m venv .venv
+#   .venv/bin/pip install -r requirements.txt
+#   cp env-EXAMPLE.txt .env      # then add your GROQ_API_KEY
+#   .venv/bin/streamlit run app.py
+
+# --- Web UI ---
+streamlit==1.64.0
+streamlit-mic-recorder==0.0.8
+
+# --- LLM + chains ---
+# app.py imports langchain.chains, langchain.text_splitter and langchain.memory.
+# Those import paths exist in the 0.3.x line and were REMOVED in langchain 1.x,
+# so this must stay pinned below 0.4 until app.py is migrated.
+langchain==0.3.30
+langchain-core==0.3.86
+langchain-community==0.3.31
+langchain-groq==0.3.8
+langchain-huggingface==0.3.1
+
+# --- Embeddings + vector store ---
+sentence-transformers==3.4.1
+faiss-cpu==1.15.1
+
+# --- Document loaders ---
+pypdf==6.19.0
+docx2txt==0.9
+
+# --- Text to speech ---
+gTTS==2.5.4
+
+# --- Config ---
+python-dotenv==1.2.3
+
+# --- sqlite3 shim, Linux only (Streamlit Cloud / Docker) ---
+pysqlite3-binary==0.5.4; sys_platform == "linux"
+
+# Removed from the original file:
+#   protobuf==3.20.0  -> conflicts with groq, which requires protobuf>=4.25.3.
+#                        Nothing here needs the old pin (no chromadb in use).
+#   asyncio==3.4.3    -> abandoned PyPI package that shadows the stdlib module.
+#   chromadb, langchain_chroma, langchain_openai, langchain_experimental,
+#   openai, llamaapi, PyPDF2, bs4, streamlit_chat, ipykernel, pandas,
+#   matplotlib        -> not imported anywhere in app.py.
