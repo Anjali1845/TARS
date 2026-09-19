@@ -123,7 +123,6 @@ ChatGroq(
 
 ## 🤝 Contribution & Contact
 
-## 🤝 Contribution & Contact
 
 If you have ideas, feedback, or collaboration opportunities, feel free to reach out.
 
