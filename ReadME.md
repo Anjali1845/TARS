@@ -123,5 +123,9 @@ ChatGroq(
 
 ## 🤝 Contribution & Contact
 
-Have ideas or found a bug?  
-📧 Email: [mokakrishna212@gmail.com](mailto:mokakrishna212@gmail.com)
+## 🤝 Contribution & Contact
+
+If you have ideas, feedback, or collaboration opportunities, feel free to reach out.
+
+📧 Email: mokaanjali1845@gmail.com
+💼 LinkedIn: https://www.linkedin.com/in/anjali-moka/
